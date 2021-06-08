@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --outercardsmargin: 40px;
+}
+#cards{
+    display: flex;
+    margin-top: 80px;
+    margin-left: var(--outercardsmargin);
+    margin-right: var(--outercardsmargin);
+}
+.innercards{
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    padding: 0px 20px;
+}
+
+.cardsheading{
+    padding: 20px 0px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+.cardspara{
+    padding: 10px 0px;
+    font-size: 17px;
+    line-height: 34px;
+}
+.para1{
+    width: 409px;
+}
+
+/* horizonal line styling */
+.horizontalline{
+    width: 80%;
+    font-weight: 100;
+}
+.hr{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 2px;
+    align-items: center;
+}

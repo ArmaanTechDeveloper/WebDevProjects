@@ -1,0 +1,412 @@
+/* Imports  */
+
+@import url('https://fonts.googleapis.com/css?family=MuseoModerno');
+@import url('https://fonts.googleapis.com/css?family=Caveat');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+@import url('https://fonts.googleapis.com/css?family=::Raleway');
+@import url('https://fonts.googleapis.com/css?family=::Chilanka');
+@import url('https://fonts.googleapis.com/css?family=::Oxygen+Mono');
+
+
+/* css reset  */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    outline: none;
+}
+
+
+/* Navigation bar  */
+
+#navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+}
+
+.navigation ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation ul li {
+    list-style: none;
+    border: 1px solid #fff;
+    background: none;
+    padding: 5px 10px;
+    font-size: 20px;
+    font-family: "Chilanka";
+    cursor: pointer;
+    margin: 6px 0px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+.navigation ul li a {
+    padding: 7px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #3498db;
+    transition: 0.8s;
+    border-radius: 0px 10px 0px 10px;
+
+}
+
+.navigation ul li a:hover{
+    background-color: #3498db;
+    color: #fff;
+    transition: 0.8s;
+}
+
+
+/* banner section  */
+
+#banner{
+    height: 100vh;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#banner::before{
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: url('https://source.unsplash.com/1600x900/?books,stationary') center center/cover;
+    width: 99vw;
+    height: 100vh;
+    background-attachment: fixed;
+    z-index: -1;
+    opacity: 0.7;
+
+}
+#banner span{
+    position: absolute;
+    pointer-events: none;
+    background: white;
+    animation: animate 5s linear infinite;
+    z-index: -1;
+}
+
+
+/* The banner settings  */
+
+#bannerh2{
+    font-size: 39px;
+    color: white;
+ 
+    text-align: center;
+    background: rgb(93,93,98);
+    background:black;
+    font-family: 'Chilanka';
+    padding: 10px 40px;
+    border-radius: 10px;
+    border-radius: 0px 0px 10px 10px;
+    opacity: 1;
+
+}
+#bannerh22{
+    font-size: 39px;
+    color: white;
+    text-align: center;
+    background: black;
+    font-family: 'Chilanka';
+    padding: 2px 40px;
+    border-radius: 10px;
+    opacity: 1;
+
+}
+
+/* search of the banner  */
+
+#search{
+    width: 50%;
+    padding: 2px 20px;
+    outline: none;
+    margin: 10px 2px;
+    height: 38px;
+    border: 2px solid white;
+    font-family: 'Chilanka';
+    font-size: 18px;
+    padding-top: 6px;
+    color: black;
+    box-shadow: 3px 3px black;
+
+}
+#set{
+    width: 100%;
+    text-align: center;
+}
+
+#send{
+    font-size: 30px;
+    color: #3498db;
+    transition: 0.5s;
+    border-radius: 1px solid black;
+    /* box-shadow: 2px 3px black; */
+}
+#send:hover{
+    color: red;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/* cards section  */
+
+#cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #d1edff;
+    margin: 2px 20px;
+    padding: 10px 5px;
+    border-radius: 35px 0px 35px 0px;
+    box-shadow: 2px 3px #3498db;
+}
+.box img{
+    width: 350px;
+    height: 200px;
+}
+
+.box h3{
+    font-family: 'Chilanka';
+    font-size: 1.8rem;
+    padding: 10px 1px;
+    text-decoration: underline;
+
+}
+.box p{
+    font-family: 'Oxygen Mono';
+    font-size: 1.1rem;
+    padding: 3px 10px;
+    text-align: center;
+}
+
+
+/* Second Header CSS  */
+
+#secondh::before{
+    content: '';
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background: url(https://source.unsplash.com/1600x900/?countries,world,globe);
+    opacity: 0.8;
+}
+
+#secondh{
+    width: 100%;
+    height: 500px;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: opacity(0.8);
+}
+#secondh > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+}
+
+#secondh h2{
+    font-size: 48px;
+    font-family: 'Chilanka';
+    color: white;
+    text-decoration: underline;
+    background-color: black;
+    padding: 4px 13px;
+    border-radius: 10px 0px 10px 0px;
+}
+
+#secondh p{
+    color: white;
+    font-size: 22px;
+    font-family: 'Oxygen Mono';
+    text-align: center;
+    background-color: black;
+    border-radius: 10px 0px 10px 0px;
+}
+
+/* get to the server section  */
+
+#server{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+#server1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 200px;
+    background-color: rgb(255, 0, 170);
+    border-radius: 20px;
+}
+#server1 > p{
+    color: white;
+    font-family: 'Chilanka';
+    font-size: 27px;
+    text-align: center;
+}
+#server2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 200px;
+    background-color: #3498db;
+    border-radius: 20px;
+
+}
+#server2 > p{
+    color: white;
+    font-family: 'Chilanka';
+    font-size: 27px;
+    text-align: center;
+}
+/* Information section  */
+
+#info1{
+    display: flex;
+    justify-content: space-around;
+}
+#info1 > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2px 20px;
+}
+
+#info1 > div > h2{
+    font-size: 4.8rem;
+    font-family: 'Chilanka';
+}
+#info1 > div > p{
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Oxygen Mono';
+}
+
+#info1 img{
+    width: 40%;
+    height: 350px;
+    border-radius: 0px 10px 0px 10px;
+    margin: 2px 30px;
+}
+
+/* info 2 styling here  */
+#info2 img{
+    width: 40%;
+    height: 350px;
+    border-radius: 0px 10px 0px 10px;
+    margin: 2px 30px;
+
+
+}
+#info2 > div > p{
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Oxygen Mono';
+}
+#info2 > div > h2{
+    font-size: 4.8rem;
+    font-family: 'Chilanka';
+}
+#info2 > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2px 20px;
+}
+#info2{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 2px;
+}
+
+
+/* quick links section  */
+
+#quicklink{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 30vh;
+    background-color: #b1b1b1;
+}
+.quicklink1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+.quicklink1 > h2{
+    font-family: 'Chilanka';
+    font-size: 40px;
+    color: white;
+}
+.quicklink1 > p{
+    color: white;
+    font-family: 'Oxygen Mono';
+    text-align: center;
+}
+.quicklink2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+.quicklink2 > h2{
+    font-family: 'Chilanka';
+    font-size: 40px;
+    color: white;
+}
+.quicklink2 > a{
+    color: white;
+    font-family: 'Oxygen Mono';
+    text-align: center;
+    transition: 0.4s;
+}
+.quicklink2 > a:hover{
+    color: black;
+    transition: 0.4s;
+}
+
+/* Footer section  */
+
+#last{
+    background-color: aqua;
+    width: 100%;
+    height: 10%;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Oxygen Mono';
+}
+#date{
+    padding: 2px 60px;
+}
