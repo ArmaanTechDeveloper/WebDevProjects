@@ -1,0 +1,38 @@
+#cardsKeAnderKaItems{
+    background-color: red;
+    height: 400px;
+    width: 60%;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+    margin: 0px auto;
+}
+.cardsKaItem{
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#cards{
+    display: flex;
+    flex-direction: column;
+    background-color: yellow;
+    padding: 20px;
+  
+}
+.cardsKaTitle{
+    text-align: center;
+}
+.hoverimage{
+    width: 70%;
+    height: 70%;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.hoverimage:hover{
+    width: 85%;
+    height: 85%;
+    transition: 0.2s ease;
+}
