@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>videoPlayer</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="videoTitle flex bg-blue-800 text-white h-12 items-center space-x-4">
+            <button id="backButton" class="w-[10%] mx-2"><img src="./whitebackButton.png" alt="" class="h-full w-full"></button>
+            <p class="text-lg ">4k Sunset In india</p>
+        </div>
+        <div id="videoSection" >
+            <div class="video  w-screen">
+                <video src="./scenery.mp4" class="w-full" controls></video>
+            </div>
+            <div class="videoControllers"></div>
+        </div>
+        <div class="contentSection bg-orange-400"></div>
+    </div>
+</body>
+</html>
