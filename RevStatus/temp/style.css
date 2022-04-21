@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+.display-none{
+    display: none !important;
+}   
+.navigation{
+    width: 20%;
+    height: 100%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    position: fixed;
+    
+    
+}
+
+.navigation > ul{
+    width: 100%;
+    background-color: #023430;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+       
+}
+.navigation > ul > li{
+    list-style: none;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation > ul > li > a{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    cursor: pointer;
+    height: 100%;
+    background-color: #00ed64;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+    border: 2px solid #023430;
+}
+.active{
+    background-color: #01A66F !important;
+    color: white !important;
+}
+
+.fullBody{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    
+}
+.container{
+    margin-left: 20%;     
+    padding: 1% 5%;
+    width: 80%;
+}
+.addNew{
+    
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    justify-content: center;
+}
+.addNew>h1{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 5px 0px;
+    color: #023430;
+}
+.addNew>label{
+    font-family: 'Rubik', sans-serif;
+    margin: 5px 0px
+    
+}
+textarea{
+    outline: none;
+    border: none;
+    border: 1px solid #01A66F;
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    padding: 5px;
+}
+.SubmitBtn{
+    width: 20%;
+    cursor: pointer;
+    border: none;
+    background-color: #023430;
+    height: 10%;
+    color: white;
+    margin: 5px 0px;
+    font-size: 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: 0.5s ease;
+}
+.SubmitBtn:hover{
+    background-color: #03443f;
+    transition: 0.5s ease;
+}
+.completedbtn{
+    background-color: #00ed64;
+    color: black;
+    width: 80%;
+    height: 50px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+.completedbtn:hover{
+    background-color: #04ca56;
+    transition: 0.3s ease;
+}
+table { 
+	width: 100%; 
+	border-collapse: collapse; 
+	margin:50px auto;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: #EFEFE8FF; 
+    color: black;
+	}
+
+th { 
+	background: #023430; 
+	color: white; 
+    font-family: 'Plus Jakarta Sans', sans-serif;
+	
+}
+
+td, th { 
+	padding: 10px; 
+	border: 1px solid #ccc; 
+	text-align: center; 
+	font-size: 18px;
+	}
+
+
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table { 
+	  	width: 100%; 
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: #000;
+		font-weight: bold;
+	}
+
+}

@@ -3,12 +3,12 @@ function addDataToAll(objects){
     let temp='';
     objects.forEach(object => {
         let html = `
-            <tr>
-                <th id="reviseTopicName">${object.topic}</th>
-                <td>${object.dateAdded}</td>
-                <td>${object.lastRevised}</td>
-                <td>${object.timesRevised}</td>
-            </tr>
+        <tr>
+            <td>${object.topic}</td>
+            <td>${object.dateAdded}</td>
+            <td>${object.lastRevised}</td>
+            <td>${object.timesRevised}</td>
+        </tr> 
     
     `
     const all = document.querySelector('#addAllHere');
@@ -24,10 +24,10 @@ function addDatatoReviseTable(data){
 
             let html = `
             <tr>
-                <th>${object.topic}</th>
+                <td class="reviseTopicName">${object.topic}</td>
                 <td>${object.lastRevised}</td>
                 <td>${object.timesRevised}</td>
-                <td><button class="btn btn-primary">Completed</button></td>
+                <td><button class="completedbtn">Completed</button></td>
             </tr>
         
         `;
