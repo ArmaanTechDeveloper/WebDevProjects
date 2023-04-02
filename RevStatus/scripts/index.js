@@ -8,6 +8,8 @@ import {
     updateDoc
 } from 'firebase/firestore'
 
+const loader = document.querySelector('.loader')
+
 const firebaseConfig = {
     apiKey: "AIzaSyAxROUgBbHheC_JqNX0M07E3_N3AAYTEiw",
     authDomain: "revision-notifier-f3570.firebaseapp.com",
@@ -33,7 +35,16 @@ const colRef = collection(db,'revData');
 let lastindex;
 let data= []
 
+const loaderon = () => {
+    loader.style.visibility = "";
+}
+const loaderoff = () => {
+    debugger
+    loader.style.visibility = "hidden";
+}
+loaderoff();
 
+// runs again and again whenever something changes in dabtabase
 onSnapshot(colRef,(snapshot)=>{
     data=[];
         snapshot.docs.forEach(doc=>{
@@ -46,11 +57,13 @@ onSnapshot(colRef,(snapshot)=>{
         
 })
 
+
+
 const addTopic = document.querySelector('#add')
 addTopic.addEventListener('submit', (e) => {
     e.preventDefault()    
+    loaderon()
     const today = createRealTimeDate()
-    console.log()
     addDoc(colRef,{
         topic: addTopic.topic.value,
         dateAdded: today,
@@ -62,8 +75,10 @@ addTopic.addEventListener('submit', (e) => {
     })
     .then(()=>{
         addTopic.reset();
+        loaderoff();
     })
 });
+
 
 const revise = document.querySelector('#addrevisehere');
 revise.addEventListener('click',(e)=>{
@@ -87,7 +102,7 @@ navigationControl.addEventListener('click',(e)=>{
         }
         e.target.classList.add('active');        
 
-        // short hand syntax contributed by : Harvey#6910
+        // short hand syntax contributed by : Harvey#6910   
         const controller = document.getElementsByClassName('controller');
         const contentController = document.getElementsByClassName('content-controller')  
 
