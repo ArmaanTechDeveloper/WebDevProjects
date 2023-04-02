@@ -116,7 +116,7 @@ function comparingTheData(data){
 
         if(
             (deltaInDays >= 7 && object.timesRevised === 0) ||
-            (deltaInDays >= 14 && object.timesRevised === 1) ||
+            (deltaInDays >= 25 && object.timesRevised === 1) ||
             (deltaInDays >= 56 && object.timesRevised === 2) ||
             (deltaInDays >= 100 && object.timesRevised === 3) ||
             (deltaInDays >= 200 && object.timesRevised === 4) ||
