@@ -115,16 +115,14 @@ function comparingTheData(data){
         let deltaInDays = delta / (1000*60*60*24);
 
         if(
-            (deltaInDays >= 1 && object.timesRevised === 0) ||
-            (deltaInDays >= 2 && object.timesRevised === 1) ||
-            (deltaInDays >= 7 && object.timesRevised === 2) ||
-            (deltaInDays >= 14 && object.timesRevised === 3) ||
-            (deltaInDays >= 28 && object.timesRevised === 4) ||
-            (deltaInDays >= 56 && object.timesRevised === 5) ||
-            (deltaInDays >= 90 && object.timesRevised === 6) ||
-            (deltaInDays >= 180 && object.timesRevised === 7) ||
-            (deltaInDays >= 360 && object.timesRevised === 8) ||
-            (deltaInDays >= 720 && object.timesRevised === 9) 
+            (deltaInDays >= 7 && object.timesRevised === 0) ||
+            (deltaInDays >= 14 && object.timesRevised === 1) ||
+            (deltaInDays >= 56 && object.timesRevised === 2) ||
+            (deltaInDays >= 100 && object.timesRevised === 3) ||
+            (deltaInDays >= 200 && object.timesRevised === 4) ||
+            (deltaInDays >= 360 && object.timesRevised === 5) ||
+            (deltaInDays >= 720 && object.timesRevised === 6)
+             
         ){
             if(!object.revisionNeeded){
                 const docRef = doc(db,'revData',object.id);
